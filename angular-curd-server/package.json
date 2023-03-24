@@ -1,0 +1,14 @@
+{
+  "name": "angular-curd-db",
+  "version": "1.0.0",
+  "description": "this is dummy server to angular curd",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Aravind Goud",
+  "license": "ISC",
+  "dependencies": {
+    "nodemon": "^2.0.22"
+  }
+}
