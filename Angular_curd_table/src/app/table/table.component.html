@@ -1,0 +1,60 @@
+<div class="add_main">
+  <button class="add">Add User</button>
+</div>
+
+<table>
+  <thead>
+    <tr>
+      <th>id</th>
+      <th>first name</th>
+      <th>age</th>
+      <th>gmail</th>
+      <th>phone</th>
+      <th>gender</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let x of userGetData">
+      <td>{{x.id}}</td>
+      <td>{{x.firstname}}</td>
+      <td>{{x.age}}</td>
+      <td>{{x.gmail}}</td>
+      <td>{{x.phn}}</td>
+      <td>{{x.gender}}</td>
+      <td>
+        <button class="edit">Edit</button>
+        <button class="delete" (click)="deletedata(x['id'])">Delete</button>
+      </td>
+    </tr>
+
+  </tbody>
+</table>
+<div class="add_form">
+    <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+        <div class="form_inside">
+          <div>
+            <input type="text" placeholder="first name" formControlName="firstname">
+          </div>
+          <div>
+            <input type="number" placeholder="age" formControlName="age">
+          </div>
+          <div>
+            <input type="mail" placeholder="gmail" formControlName="gmail">
+          </div>
+          <div>
+            <input type="number" placeholder="phn number" formControlName="phn">
+          </div>
+          <div>
+            <input type="radio" name="gender" value="male" formControlName="gender"> Male
+            <input type="radio" name="gender" value="female" formControlName="gender"> Female
+            <input type="radio" name="gender" value="other" formControlName="gender"> Other
+      
+          </div>
+          <div>
+            <button type="submit">Submit</button>
+          </div>
+        </div>
+      </form>
+</div>
+
