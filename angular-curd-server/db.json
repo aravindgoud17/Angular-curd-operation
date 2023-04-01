@@ -1,27 +1,20 @@
 {
-    "posts": [{
-            "id": 2,
-            "firstname": "madhu",
-            "age": 23,
-            "gmail": "ara@gmail.com",
-            "phn": 7386759501,
-            "gender": "male"
-        },
-        {
-            "id": 3,
-            "firstname": "vignesh",
-            "age": 23,
-            "gmail": "vignesh@gmail.com",
-            "phn": 11111111111101,
-            "gender": "male"
-        },
-        {
-            "firstname": "madhu`",
-            "age": 25,
-            "gmail": "vsdvsdvd",
-            "phn": 5254546,
-            "gender": "male",
-            "id": 4
-        }
-    ]
+  "posts": [
+    {
+      "id": 2,
+      "firstname": "Aravind",
+      "age": 23,
+      "gmail": "ara@gmail.com",
+      "phn": 7386759501,
+      "gender": "male"
+    },
+    {
+      "firstname": "madhu`",
+      "age": 25,
+      "gmail": "madhu@gmail.com",
+      "phn": 5254546,
+      "gender": "male",
+      "id": 4
+    }
+  ]
 }
