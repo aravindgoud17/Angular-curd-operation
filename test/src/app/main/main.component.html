@@ -1,7 +1,7 @@
 <app-header></app-header>
 <div>
   <div>
-    <button mat-raised-button color="primary" (click)="adduser()">Add User</button>
+    <button mat-raised-button color="primary" (click)="adduser()" >Add User</button>
   </div>
 </div>
 <table>
@@ -23,7 +23,7 @@
     <td>{{data.phn}}</td>
     <td>{{data.gender}}</td>
     <td>
-      <button mat-raised-button (click)="updateUser(data['id'],data)" color="primary">Edit</button>
+      <button mat-raised-button (click)="editUser(data)" color="primary">Edit</button>
       <button mat-raised-button (click)="deleteUser(data['id'])" color="warn">Delete</button>
       <!-- <button  class="delete-btn">Dealete</button> -->
     </td>
@@ -64,7 +64,7 @@
       FEMALE <input formControlName="gender" type="radio" value="female" name="gender">
       OTHER <input formControlName="gender" type="radio" value="other" name="gender">
     </div>
-    <button mat-raised-button color="accent" type="submit">SUBMIT</button>
-     <button mat-raised-button color="accent" type="submit" >update</button>
+    <button mat-raised-button color="accent" type="submit"  *ngIf="!showupdatebtn">SUBMIT</button>
+     <button mat-raised-button color="accent" (click)="updateUser(myform)" *ngIf="showupdatebtn" >update</button>
   </form>
 </div>

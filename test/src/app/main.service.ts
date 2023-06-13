@@ -23,11 +23,11 @@ export class MainService {
   sendData(data:any): Observable<any>{
     return this._http.post(this.url,data)
   }
-  updateData(id:any,data:any){
+  updateData(data:any){
 
-    console.log(id , 'll');
+    // console.log(id , 'll');
     console.log(data , 'll');
     
-    return this._http.put(this.url+'/'+id,data)
+    return this._http.put(this.url+'/'+data.id,data)
   }
 }
