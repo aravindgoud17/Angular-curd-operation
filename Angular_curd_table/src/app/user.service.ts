@@ -15,6 +15,7 @@ export class UserService {
     return this._http.get(this.url)
   }
   deleteData(id:any){
+    alert("do you want to delete User")
     console.log(id,"id");
     
     return this._http.delete(this.url+'/'+id);

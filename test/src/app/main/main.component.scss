@@ -1,0 +1,32 @@
+table{
+//        border: 2px solid red;
+    width: 100%;
+    text-align: center;
+    border: 2px solid whitesmoke;
+    border-collapse: collapse;
+th{
+    border: 2px solid rgb(194, 244, 27);
+}
+tr{
+    border: 2px solid whitesmoke;
+}
+td{
+    border: 2px solid whitesmoke;
+    // padding: 6px 0px;
+    mat-button{
+    // border: none;
+    // padding: 15px;
+    // border-radius: 32px;
+    // width: 30%;
+    // cursor: pointer;
+    }
+   
+}
+    
+}
+.model{
+    position: absolute;
+    top: 166px;
+    background: cornflowerblue;
+    left: 102px;
+}

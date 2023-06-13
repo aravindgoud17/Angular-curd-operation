@@ -1,0 +1,70 @@
+<app-header></app-header>
+<div>
+  <div>
+    <button mat-raised-button color="primary" (click)="adduser()">Add User</button>
+  </div>
+</div>
+<table>
+  <tr>
+    <th>ID</th>
+    <th>NAME</th>
+    <th>AGE</th>
+    <th>GMAIL</th>
+    <th>PHN</th>
+    <th>GENDER</th>
+    <th>ACTION</th>
+  </tr>
+
+  <tr *ngFor="let data of getdatas">
+    <td>{{data.id}}</td>
+    <td>{{data.firstname}}</td>
+    <td>{{data.age}}</td>
+    <td>{{data.gmail}}</td>
+    <td>{{data.phn}}</td>
+    <td>{{data.gender}}</td>
+    <td>
+      <button mat-raised-button (click)="updateUser(data['id'],data)" color="primary">Edit</button>
+      <button mat-raised-button (click)="deleteUser(data['id'])" color="warn">Delete</button>
+      <!-- <button  class="delete-btn">Dealete</button> -->
+    </td>
+  </tr>
+</table>
+<div class="model" *ngIf="showform">
+  <form [formGroup]="myform" (ngSubmit)="onSubmit()">
+    <div>
+      <!-- <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon"> -->
+        <mat-icon style="float: right;
+        top: 0;
+        position: absolute;
+        right: 0;" (click)="close()">close</mat-icon> 
+    </div>
+    <div>
+      <label>ID</label>
+      <input type="number" formControlName="id">
+    </div>
+    <div>
+      <label>NAME</label>
+      <input formControlName="firstname" type="text">
+    </div>
+    <div>
+      <label>Age</label>
+      <input formControlName="age" type="text">
+    </div>
+    <div>
+      <label>GMAIL</label>
+      <input formControlName="gmail" type="email">
+    </div>
+    <div>
+      <label>PHN</label>
+      <input formControlName="phn" type="number">
+    </div>
+    <div>
+      <label>GENDER</label>
+      MALE <input formControlName="gender" type="radio" value="male" name="gender">
+      FEMALE <input formControlName="gender" type="radio" value="female" name="gender">
+      OTHER <input formControlName="gender" type="radio" value="other" name="gender">
+    </div>
+    <button mat-raised-button color="accent" type="submit">SUBMIT</button>
+     <button mat-raised-button color="accent" type="submit" >update</button>
+  </form>
+</div>
